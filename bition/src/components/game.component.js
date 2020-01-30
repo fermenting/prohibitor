@@ -11,10 +11,81 @@ export default class Game extends Component {
     this.onSubmit = this.onSubmit.bind(this);
 
     this.state = {
-      todo_description: '',
-      todo_responsible: '',
-      todo_priority: '',
-      todo_completed: false
+      userName: '',
+      turnNumber: 0,
+      cash: 5,
+
+      fermentorCost: 3,
+      fermentorCount: 0,
+      
+      fermentedBeer: 0,
+      beerCost: 1,
+      beerPrice: 4,
+      beerMaxVariation: 2,
+
+      fermentedCider: 0,
+      ciderCost: 3,
+      ciderPrice: 10,
+      ciderMaxVariation: 5,
+
+      fermentedHootch: 0,
+      hootchCost: 5,
+      hootchPrice: 25,
+      hootchMaxVariation: 15,
+      
+      
+      bottledBeer: 0,
+      bottledCider: 0,
+      bottledHootch: 0,
+      
+      smallStill: false,
+      smallStillPrice: 100,
+      mediumStill: false,
+      mediumStillPrice: 400,
+      largeStill:false,
+      largeStillPrice: 1400,
+      
+      storageFront: false,
+      storageFrontRent: 50,
+      storageFarm: false,
+      storageFrontRent: 200,
+      storageWarehouse: false,
+      storageWarehouseRent: 1000,
+
+      horseCarriage: false,
+      horseCapacity: 20,
+      horseCarriageTurnsLeft: 2*52,
+      horseCarriagePrice: 150,
+      horseCarriageUpkeep: 7,
+      horseCarriageSpeed: 140,
+
+      automobile: false,
+      automobileCapacity: 50,
+      automobilePrice: 350,
+      automobileTurnsLeft: 4*52,
+      automobileMilesLeft: 5000,
+      automobileGas: 1,
+      automobileSpeed: 1050,
+
+
+      pickupTruck: false,
+      pickupTruckCapacity: 120,
+      pickupTruckPrice: 500,
+      pickupTruckTurnsLeft: 5*52,
+      pickupTruckMilesLeft: 7000,
+      pickupTruckGas: 2,
+      pickupTruckSpeed: 950,
+
+      boxTruck: false,
+      boxTruckCapacity: 600,
+      boxTruckPrice: 950,
+      boxTruckTurnsLeft: 7*52,
+      boxTruckMilesLeft: 10000,
+      boxTruckGas: 4,
+      boxTruckSpeed: 800,
+
+      laborCompensationRate: 70,
+      
     }
   }
 
@@ -55,66 +126,8 @@ export default class Game extends Component {
  
 render() {
   return (
-      <div style={{marginTop: 10}}>
-          <h3>Create New Todo</h3>
-          <form onSubmit={this.onSubmit}>
-              <div className="form-group"> 
-                  <label>Description: </label>
-                  <input  type="text"
-                          className="form-control"
-                          value={this.state.todo_description}
-                          onChange={this.onChangeTodoDescription}
-                          />
-              </div>
-              <div className="form-group">
-                  <label>Responsible: </label>
-                  <input 
-                          type="text" 
-                          className="form-control"
-                          value={this.state.todo_responsible}
-                          onChange={this.onChangeTodoResponsible}
-                          />
-              </div>
-              <div className="form-group">
-                  <div className="form-check form-check-inline">
-                      <input  className="form-check-input" 
-                              type="radio" 
-                              name="priorityOptions" 
-                              id="priorityLow" 
-                              value="Low"
-                              checked={this.state.todo_priority==='Low'} 
-                              onChange={this.onChangeTodoPriority}
-                              />
-                      <label className="form-check-label">Low</label>
-                  </div>
-                  <div className="form-check form-check-inline">
-                      <input  className="form-check-input" 
-                              type="radio" 
-                              name="priorityOptions" 
-                              id="priorityMedium" 
-                              value="Medium" 
-                              checked={this.state.todo_priority==='Medium'} 
-                              onChange={this.onChangeTodoPriority}
-                              />
-                      <label className="form-check-label">Medium</label>
-                  </div>
-                  <div className="form-check form-check-inline">
-                      <input  className="form-check-input" 
-                              type="radio" 
-                              name="priorityOptions" 
-                              id="priorityHigh" 
-                              value="High" 
-                              checked={this.state.todo_priority==='High'} 
-                              onChange={this.onChangeTodoPriority}
-                              />
-                      <label className="form-check-label">High</label>
-                  </div>
-              </div>
-
-              <div className="form-group">
-                  <input type="submit" value="Create Todo" className="btn btn-primary" />
-              </div>
-          </form>
+      <div>
+        
       </div>
   )
 }
